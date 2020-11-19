@@ -39,7 +39,6 @@ export default function FiltersComponent() {
 
   const inputChange = (field, value) => {
     filtersData[field] = value;
-    console.log(filtersData);
     dispatch({ type: API_FILTER_CHANGE, apiFilterSelectedValues: filtersData })
   }
 
@@ -140,7 +139,6 @@ export default function FiltersComponent() {
                     ampm={false}
                     onChange={(event) => {
                       setSelectedDate(event)
-                      console.log(event.toISOString().substr(0, 19));
                       inputChange(apiFiltersData.timestamp.id, selectedDate.toISOString().substr(0, 19))
                     }}
                   />
