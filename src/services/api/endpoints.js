@@ -9,13 +9,10 @@ export const getApiFiltersData = async () =>{
 };
 
 export const getSpotifyFeaturedPlaylists = async(params, token) => {
-    console.log(token);
-    console.log(params);
     const response = await axios.get(SPOTIFY_FEATURED_PLAYLISTS_URL, {
         headers: { Authorization: `Bearer ${token}`},
         params: params
     });
 
-    console.log(response.data);
     return response.data.playlists;
 }

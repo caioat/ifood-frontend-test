@@ -27,7 +27,6 @@ export default function MainComponent() {
   const [hasMore, setHasMore] = useState(true)
 
   const filtersRedux = useSelector(store => store.apiFilterChangeReducer);
-  console.log(filtersRedux);
 
   const classes = useStyles();
 
@@ -54,7 +53,6 @@ export default function MainComponent() {
       const auxObj = paramsObj;
 
       const splittedParam = param.split('=');
-      console.log(splittedParam);
       auxObj[splittedParam[0]] = splittedParam[1];
 
       return auxObj;
